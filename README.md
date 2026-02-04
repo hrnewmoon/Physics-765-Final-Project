@@ -1,2 +1,2 @@
 # Physics-765-Final-Project
-For my final project, I want to create a Python tool that takes a specific ZX diagram, compiles and optimizes it into an executable qutrit circuit form, runs it under noise, and outputs resource and error metrics. It will also compare these error and resource results with the qubit implementation. I specifically want to focus on encoding/decoding maps, arbitrary qutrit state preparation, and if time an algorithmic primitive for some 2-qutrit operation. 
+My project will act similarly to the PyZX tool for qubits, but rather for qutrits. The tool will be able to take any qutrit circuit, rewrite it using qutrit ZX rules, then return an optimized version of the original circuit. 
