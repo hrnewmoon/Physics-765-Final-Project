@@ -1,4 +1,28 @@
-# Physics-765-Final-Project
-My project is a computational study that will determine whether certain qutrit ZX rewrite rules reduce the resources necessary for small algorithm-based qutrit circuits. I will manually apply these rewrite rules for a specific set of qutrit circuits and compare the resources such as number of gate counts, circuit depth, and entangling gates in the optimized circuit against the original circuit. The goal is to determine whether qutrit ZX rewrite rules can improve resource use to assist in future resource-efficient qutrit circuit design.
+# Qutrit ZX Spider Fusion Project
+This repository contains the code for my final project on qutrit ZX-calculus simplification using Z-spider fusion. The project implements qutrit ZX graph representations using the NetworkX Python library and applies the qutrit Z-spider fusion rule to circuit-derived graph examples.
 
-My repository currently contains a file that defines qutrit ZX graphs and Z-spider fusion rule using NetworkX Python library. Then it runs this on a 3-qutrit instance of QFT, producing graph metric counts before and after rewrite. I then have a toy QFT(n)-like instance which I run for difference n's and look at reduction metrics & qutrit count vs runtime. I then do strang-splitting trotterization of my Hamiltonian, H=alphaZ+betaX and verify convergence as number of time steps increases. 
+## Problem Statement
+The goal of this project is to test whether a qutrit-native ZX-calculus rewrite rule, Z-spider fusion, produces meaningful diagrammatic reductions for small qutrit circuit families. The project focuses on graph-level reductions such as Z-spider counts, node counts, edge counts, and runtime. It also discusses the limitation that diagrammatic reductions do not always directly imply circuit-level resource reductions.
+
+## Main File
+The main entry point for the project is: main_results.ipynb. Run this notebook from top to bottom to reproduce the main results discussed in the report.
+
+## Repository Contents
+- Construction of qutrit ZX graph using NetworkX
+- n qutrit QFT(metrics +validation checks)
+- Non engtanlging Hamiltonian Trotterization (metrics + convergence check)
+- Entangling Hamiltonian Trotterization (metrics + convergence check)
+- Redundancy / Negative Control Checks
+
+## Reproducing Results 
+To reproduce the main results from the report: 
+1. Download this repository
+2. Install dependencies using: pip install -r requirements.txt
+3. Open the notebook: main_results.ipynb
+4. Run all cells from top to bottom in Jupyter Notebook or JupyterLab.
+
+## Data Provenances 
+No external datasets are used in this project. All graphs, numerical examples, tables, and plots are generated directly from the code in the notebook.
+
+## Validation Check 
+Validation checks are included directly in `main_results.ipynb`, including graph-structure checks, numerical validation of the Z-spider fusion rule, Trotter convergence checks, and control tests. 
